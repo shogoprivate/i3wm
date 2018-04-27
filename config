@@ -168,6 +168,12 @@ mode "$mode_system" {
 }
 bindsym $mod+q mode "$mode_system"
 
-# turn off screensaver
+# turn off screensaver ***
 #exec_always --no-startup-id xset s off
+exec_always --no-startup-id xset s 5400
+# turn off the power saving feature ***
+#exec_always --no-startup-id xset -dpms
+exec_always --no-startup-id xset dpms 5400 5400 5400
 
+# chrome ***
+bindsym $mod+w exec --no-startup-id "/opt/google/chrome/google-chrome --disable-logging"
